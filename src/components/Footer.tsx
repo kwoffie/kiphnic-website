@@ -1,24 +1,6 @@
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
-import {
-  InstagramIcon,
-  LinkedinIcon,
-  SnapchatIcon,
-} from "@/components/ui/SocialIcon";
-
-/** Account links shown in the footer (LinkedIn, Snapchat, Instagram). */
-const footerSocials = siteConfig.socials.filter((s) =>
-  (["LinkedIn", "Snapchat", "Instagram"] as string[]).includes(s.label)
-);
-
-const footerSocialIcons: Record<
-  string,
-  React.ComponentType<{ className?: string }>
-> = {
-  LinkedIn: LinkedinIcon,
-  Snapchat: SnapchatIcon,
-  Instagram: InstagramIcon,
-};
+import SocialLinks from "@/components/ui/SocialLinks";
 
 export default function Footer() {
   return (
@@ -38,23 +20,7 @@ export default function Footer() {
         <div className="foot-socials">
           <span className="foot-social-title">FOLLOW US</span>
           <div className="foot-social">
-            {footerSocials.map((s) => {
-              const label = s.label;
-              const Icon = footerSocialIcons[label];
-              return (
-                <Link
-                  key={s.label}
-                  className="social-chip"
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                >
-                  <Icon />
-                  <span>{label.toUpperCase()}</span>
-                </Link>
-              );
-            })}
+            <SocialLinks variant="footer" />
           </div>
         </div>
         <span className="foot-line">{siteConfig.footerLine}</span>
@@ -63,3 +29,4 @@ export default function Footer() {
     </footer>
   );
 }
+

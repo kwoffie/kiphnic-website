@@ -106,7 +106,7 @@ export default function ChatWindow({ compact = false }: { compact?: boolean }) {
                   style={{ background: "transparent", border: 0, color: "var(--accent)", cursor: "pointer", fontSize: 18 }}
                 >
                   →
-                </button>
+                 </button>
               </div>
             </form>
           </>

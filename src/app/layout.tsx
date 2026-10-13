@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ChatLauncher from "@/components/chat/ChatLauncher";
 import MiniMe from "@/components/MiniMe";
+import ThemeProvider from "@/components/ThemeProvider";
 import AuthProvider from "@/components/auth/AuthProvider";
 import { siteConfig } from "@/lib/site-config";
 
@@ -44,7 +45,10 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#03070d",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#eef2f8" },
+    { media: "(prefers-color-scheme: dark)", color: "#03070d" },
+  ],
 };
 
 export default function RootLayout({
@@ -53,18 +57,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('theme');var d;if(t==='light'||t==='dark'){d=t}else{d=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)?'light':'dark'}document.documentElement.setAttribute('data-theme',d);document.documentElement.style.colorScheme=d}catch(e){document.documentElement.setAttribute('data-theme','dark')}})();`,
+          }}
+        />
         <a className="skip-link" href="#main">
           Skip to content
         </a>
-        <AuthProvider>
-          <Navbar />
-          <div id="main">{children}</div>
-          <Footer />
-          <MiniMe />
-          <ChatLauncher />
-        </AuthProvider>
+        <ThemeProvider>
+          <AuthProvider>
+            <Navbar />
+            <div id="main">{children}</div>
+            <Footer />
+            <MiniMe />
+            <ChatLauncher />
+          </AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

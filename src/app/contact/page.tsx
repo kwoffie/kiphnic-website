@@ -3,8 +3,8 @@ import Link from "next/link";
 import PageHero from "@/components/ui/PageHero";
 import Reveal from "@/components/ui/Reveal";
 import ContactForm from "@/components/ContactForm";
+import SocialLinks from "@/components/ui/SocialLinks";
 import { siteConfig } from "@/lib/site-config";
-import { XIcon, LinkedinIcon, GithubIcon, InstagramIcon, SnapchatIcon } from "@/components/ui/SocialIcon";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -16,14 +16,6 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  const socialIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-    X: XIcon,
-    LinkedIn: LinkedinIcon,
-    GitHub: GithubIcon,
-    Instagram: InstagramIcon,
-    Snapchat: SnapchatIcon,
-  };
-
   return (
     <main>
       <PageHero
@@ -65,23 +57,7 @@ export default function ContactPage() {
                 </div>
                 <div className="socials">
                   <strong>FOLLOW</strong>
-                  <div className="socials-row">
-                    {siteConfig.socials.map((s: { label: string; href: string }) => {
-                      const label = s.label;
-                      const Icon = socialIcons[label];
-                      return (
-                        <Link
-                          key={s.label}
-                          className="social-chip"
-                          href={s.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Icon className="h-4 w-4" />
-                        </Link>
-                      );
-                    })}
-                  </div>
+                  <SocialLinks variant="contact" />
                 </div>
               </div>
               <div className="actions-row">

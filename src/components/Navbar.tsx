@@ -5,6 +5,7 @@ import { useState } from "react";
 import { siteConfig } from "@/lib/site-config";
 import Logo from "@/components/layout/Logo";
 import AccountButton from "@/components/auth/AccountButton";
+import ThemeToggle from "@/components/layout/ThemeToggle";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -24,6 +25,7 @@ export default function Navbar() {
         <Link className="btn nav-cta" href="/contact">
           GET STARTED →
         </Link>
+        <ThemeToggle />
         <AccountButton />
         <button
           className="hamburger"

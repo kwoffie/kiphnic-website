@@ -1,9 +1,11 @@
 export const socials = [
-  { label: "X", href: "https://x.com/" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/" },
-  { label: "GitHub", href: "https://github.com/" },
-  { label: "Instagram", href: "https://instagram.com/" },
-  { label: "Snapchat", href: "https://snapchat.com/add/" },
+  { label: "WhatsApp", href: "https://wa.me/233538616119" },
+  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61595099471852" },
+  { label: "Snapchat", href: "https://www.snapchat.com/add/kiphnic?share_id=SSHxCJQ65Gk&locale=en-US" },
+  { label: "Instagram", href: "https://www.instagram.com/kiphnic7/" },
+  { label: "GitHub", href: "https://github.com/kwoffie" },
+  { label: "Discord", href: "https://discord.com/users/1399146183674302606" },
+  { label: "Steam", href: "https://steamcommunity.com/profiles/76561199767153409/" },
 ] as const;
 
 export type Social = (typeof socials)[number];
