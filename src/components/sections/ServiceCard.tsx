@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ServiceIcon from "@/components/ui/ServiceIcon";
 
 export type ServiceItem = {
   icon: string;
@@ -12,7 +13,9 @@ export default function ServiceCard({ service }: { service: ServiceItem }) {
   const href = service.id ? `/services#${service.id}` : "/services";
   return (
     <article className="card" id={service.id}>
-      <div className="icon">{service.icon}</div>
+      <div className="icon">
+        <ServiceIcon id={service.id} />
+      </div>
       <h3>{service.title}</h3>
       <p>{service.body}</p>
       {service.features ? (

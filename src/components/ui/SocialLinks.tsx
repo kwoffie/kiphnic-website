@@ -43,9 +43,9 @@ const brandColors: Record<string, string> = {
   WhatsApp: "#25D366",
   Facebook: "#1877F2",
   LinkedIn: "#0A66C2",
-  GitHub: "#ffffff",
+  GitHub: "#8b949e",
   Instagram: "#E4405F",
   Snapchat: "#FFFC00",
   Discord: "#5865F2",
-  Steam: "#66C0F4",
+  Steam: "#1a9fff",
 };

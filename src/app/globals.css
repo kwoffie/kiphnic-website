@@ -1,5 +1,5 @@
 /* Kiphnic global styles — ported 1:1 from V1 prototype (legacy-v1.html) + Next.js additions */
-:root{color-scheme:dark;--bg:#03070d;--bg-2:#040a11;--bg-3:#050b13;--bg-4:#061426;--deep:#030912;--panel:#07111d;--panel-2:#081725;--panel-3:#091b2c;--panel-4:#0a2034;--input:#050c14;--card-a:#081725cc;--card-b:#040a12cc;--line:#123451;--line-2:#12466e;--line-3:#16466b;--line-4:#17496d;--line-5:#11324d;--line-6:#126096;--hairline:rgba(0,150,255,.12);--grid:rgba(0,140,255,.02);--text:#f3f8ff;--text-bright:#d9ecff;--text-soft:#c6d4e4;--text-lead:#a9b9cb;--muted:#9aacc0;--muted-2:#879db4;--muted-3:#71869c;--muted-4:#6f8ca9;--muted-5:#5c7894;--on-photo:#f3f8ff;--on-photo-lead:#a9b9cb;--on-photo-muted:#6f8ca9;--accent:#0a9cff;--accent-2:#087cf0;--accent-hi:#05a9ff;--accent-lite:#168dff;--accent-soft:#58baff;--accent-pale:#8fd0ff;--accent-brand:#52aefb;--accent-bright:#28a6ff;--accent-icon:#10a5ff;--on-accent:#fff;--btn-alt-ink:#fff;--accent-photo:#0a9cff;--accent-photo-2:#087cf0;--accent-photo-hi:#05a9ff;--accent-photo-soft:#58baff;--accent-photo-lite:#168dff;--on-accent-photo:#fff;--nav-bg:rgba(3,7,13,.72);--veil-a:rgba(3,7,13,.9);--veil-b:rgba(3,7,13,.94);--veil-2a:rgba(3,7,13,.82);--veil-2b:rgba(3,7,13,.88);--foot-bg:rgba(3,7,13,.9);--foot-bg-2:rgba(3,7,13,.94);--bubble-bg:rgba(3,7,13,.92);--pop-shadow:0 20px 60px #00000088,0 0 50px #008cff22;--ok:#21e6a1;--danger:#ff7a7a}
+:root{color-scheme:dark;--bg:#03070d;--bg-2:#040a11;--bg-3:#050b13;--bg-4:#061426;--deep:#030912;--panel:#07111d;--panel-2:#081725;--panel-3:#091b2c;--panel-4:#0a2034;--input:#050c14;--card-a:#081725cc;--card-b:#040a12cc;--line:#123451;--line-2:#12466e;--line-3:#16466b;--line-4:#17496d;--line-5:#11324d;--line-6:#126096;--hairline:rgba(0,150,255,.12);--grid:rgba(0,140,255,.02);--text:#f3f8ff;--text-bright:#d9ecff;--text-soft:#c6d4e4;--text-lead:#a9b9cb;--muted:#9aacc0;--muted-2:#879db4;--muted-3:#71869c;--muted-4:#6f8ca9;--muted-5:#5c7894;--on-photo:#f3f8ff;--on-photo-lead:#a9b9cb;--on-photo-muted:#6f8ca9;--accent:#0a9cff;--accent-2:#087cf0;--accent-hi:#05a9ff;--accent-lite:#168dff;--accent-soft:#58baff;--accent-pale:#8fd0ff;--accent-brand:#52aefb;--accent-bright:#28a6ff;--accent-icon:#10a5ff;--on-accent:#fff;--btn-alt-ink:#fff;--accent-photo:#0a9cff;--accent-photo-2:#087cf0;--accent-photo-hi:#05a9ff;--accent-photo-soft:#58baff;--accent-photo-lite:#168dff;--on-accent-photo:#fff;--nav-bg:rgba(3,7,13,.72);--veil-a:rgba(3,7,13,.9);--veil-b:rgba(3,7,13,.94);--veil-2a:rgba(3,7,13,.82);--veil-2b:rgba(3,7,13,.88);--foot-bg:rgba(3,7,13,.9);--foot-bg-2:rgba(3,7,13,.94);--bubble-bg:rgba(3,7,13,.92);--pop-shadow:0 20px 60px #00000088,0 0 50px #008cff22;--ok:#21e6a1;--danger:#ff7a7a;--mono-mark:#ffffff}
 
 /* ============================================================================
    LIGHT THEME — redefines the same semantic tokens as :root (dark).
@@ -8,7 +8,7 @@
    --accent-photo*) are intentionally left unchanged so hero text stays
    light over the dark hero images in BOTH themes.
    ============================================================================ */
-[data-theme="light"]{color-scheme:light;--bg:#eef2f8;--bg-2:#e7edf5;--bg-3:#e0e8f1;--bg-4:#d9e3ef;--deep:#eef2f8;--panel:#f7fafd;--panel-2:#f6f9fc;--panel-3:#eaf1f8;--panel-4:#e2ebf4;--input:#ffffff;--card-a:#f6fafee6;--card-b:#e8f0f8e6;--line:#d3dde8;--line-2:#c2d0e0;--line-3:#adc0d6;--line-4:#9db3cb;--line-5:#cbd8e6;--line-6:#7fa6cd;--hairline:rgba(12,105,190,.16);--grid:rgba(10,140,255,.055);--text:#0c1a28;--text-bright:#05101b;--text-soft:#3c4f63;--text-lead:#47596e;--muted:#4f6377;--muted-2:#5b6f83;--muted-3:#687b8f;--muted-4:#77899c;--muted-5:#8798aa;--accent:#0a7ce0;--accent-2:#0b6cc9;--accent-hi:#2f96f5;--accent-lite:#1e83e2;--accent-soft:#0f6fc4;--accent-pale:#5aa7ef;--accent-brand:#1a80dd;--accent-bright:#1c8bf0;--accent-icon:#0a7ce0;--on-accent:#ffffff;--btn-alt-ink:#0c1a28;--nav-bg:rgba(238,242,248,.92);--veil-a:rgba(238,242,248,.86);--veil-b:rgba(238,242,248,.94);--veil-2a:rgba(238,242,248,.8);--veil-2b:rgba(238,242,248,.88);--foot-bg:rgba(238,242,248,.97);--foot-bg-2:rgba(238,242,248,.985);--bubble-bg:rgba(255,255,255,.96);--pop-shadow:0 20px 60px rgba(15,35,60,.14),0 0 50px rgba(10,140,255,.12);--ok:#0e9c6e;--danger:#d6453f}
+[data-theme="light"]{color-scheme:light;--bg:#eef2f8;--bg-2:#e7edf5;--bg-3:#e0e8f1;--bg-4:#d9e3ef;--deep:#eef2f8;--panel:#f7fafd;--panel-2:#f6f9fc;--panel-3:#eaf1f8;--panel-4:#e2ebf4;--input:#ffffff;--card-a:#f6fafee6;--card-b:#e8f0f8e6;--line:#d3dde8;--line-2:#c2d0e0;--line-3:#adc0d6;--line-4:#9db3cb;--line-5:#cbd8e6;--line-6:#7fa6cd;--hairline:rgba(12,105,190,.16);--grid:rgba(10,140,255,.055);--text:#0c1a28;--text-bright:#05101b;--text-soft:#3c4f63;--text-lead:#47596e;--muted:#4f6377;--muted-2:#5b6f83;--muted-3:#687b8f;--muted-4:#77899c;--muted-5:#8798aa;--accent:#0a7ce0;--accent-2:#0b6cc9;--accent-hi:#2f96f5;--accent-lite:#1e83e2;--accent-soft:#0f6fc4;--accent-pale:#5aa7ef;--accent-brand:#1a80dd;--accent-bright:#1c8bf0;--accent-icon:#0a7ce0;--on-accent:#ffffff;--btn-alt-ink:#0c1a28;--nav-bg:rgba(238,242,248,.92);--veil-a:rgba(238,242,248,.86);--veil-b:rgba(238,242,248,.94);--veil-2a:rgba(238,242,248,.8);--veil-2b:rgba(238,242,248,.88);--foot-bg:rgba(238,242,248,.97);--foot-bg-2:rgba(238,242,248,.985);--bubble-bg:rgba(255,255,255,.96);--pop-shadow:0 20px 60px rgba(15,35,60,.14),0 0 50px rgba(10,140,255,.12);--ok:#0e9c6e;--danger:#d6453f;--mono-mark:#1b1f24}
 /* ---- Light mode: blend the dark photo heroes into the light page ---- */
 /* 1. Stop the fixed dark photo from bleeding through translucent sections. */
 [data-theme="light"] main section:not(.hero):not(.page-hero){background:linear-gradient(180deg,var(--bg),var(--bg-2))}
@@ -123,7 +123,8 @@ section{padding:var(--sec-pad);border-top:1px solid var(--hairline)}
 
     .card:hover{transform:translateY(-5px);border-color:var(--accent);box-shadow:0 0 35px color-mix(in srgb, var(--accent) 9%, transparent)}
 
-    .icon{color:var(--accent-icon);font-size:25px;margin-bottom:25px}
+    .icon{color:var(--accent-icon);font-size:25px;margin-bottom:25px;display:inline-flex}
+    .icon svg{width:26px;height:26px;display:block}
 
     .card h3{font-size:15px;letter-spacing:.08em}
 .card p{color:var(--muted-2);font-size:13px;line-height:1.75;margin-top:14px}
@@ -239,6 +240,36 @@ main{display:block}
 .foot-links a:hover{color:var(--accent-bright)}
 .foot-line{color:var(--accent-brand);letter-spacing:.2em}
 a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent-bright);outline-offset:3px;border-radius:6px}
+
+/* ============================================================================
+   PAGE ENTRANCE + AMBIENT ANIMATIONS
+   Pure-CSS, load-time motion layered on top of the scroll .reveal system.
+   All of it is neutralised by the prefers-reduced-motion guard below, so
+   reduced-motion users get a static page (no flashing/movement).
+   ============================================================================ */
+@keyframes kip-rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes kip-fade{from{opacity:0}to{opacity:1}}
+@keyframes kip-orb-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+@keyframes kip-orb-spin{to{transform:rotate(360deg)}}
+@keyframes kip-glow{0%,100%{opacity:.55}50%{opacity:1}}
+
+/* Hero / page-hero: stagger the classic copy blocks in on load. */
+.page-hero .eyebrow,
+.hero .eyebrow{animation:kip-rise .7s cubic-bezier(.22,.61,.36,1) both}
+.page-hero .page-title,
+.hero h1{animation:kip-rise .7s cubic-bezier(.22,.61,.36,1) .08s both}
+.page-hero .lead,
+.hero .lead{animation:kip-rise .7s cubic-bezier(.22,.61,.36,1) .16s both}
+.page-hero .actions,
+.hero .actions{animation:kip-rise .7s cubic-bezier(.22,.61,.36,1) .24s both}
+.hero .tags{animation:kip-rise .7s cubic-bezier(.22,.61,.36,1) .32s both}
+
+/* Ambient orb life (home hero art + any .orb). */
+.hero-art .orb{animation:kip-orb-float 6s ease-in-out infinite}
+.hero-art .orb:before,.hero-art .orb:after{animation:kip-orb-spin 26s linear infinite}
+.hero-art .logo-core{animation:kip-glow 5s ease-in-out infinite}
+
+/* Section headings gently rise when their .reveal fires (composable). */
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal.pre,.reveal{opacity:1!important;transform:none!important;transition:none!important}*{animation-duration:.01ms !important;transition-duration:.01ms !important}}
 
 /* Phase 2 — home teasers + shared section pieces */
@@ -297,6 +328,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 .social-tile:focus-visible{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 32%,transparent)}
 .social-tile:active{transform:translateY(-1px) scale(.97)}
 .social-tile--labeled{padding:0 16px}
+/* GitHub & Steam are "mono" logos: light on dark tiles, dark on light tiles.
+   Their SVG paths use currentColor, so they follow --mono-mark per theme. */
+.social-mono{color:var(--mono-mark)}
 @media(max-width:520px){.social-tile{height:44px;min-width:44px}.social-tile--labeled{height:44px}}
 
 /* Footer social account links. */

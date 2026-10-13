@@ -7,24 +7,28 @@ import ServiceCard from "@/components/sections/ServiceCard";
 
 const services = [
   {
+    id: "ai",
     icon: "AI",
     title: "AI PLATFORM",
     body: "Custom AI assistants, copilots and automation — chat, document QA and workflow agents trained on your product.",
     features: ["Conversational AI", "RAG & vector search", "Slack / Teams / Web", "Admin dashboard"],
   },
   {
+    id: "software",
     icon: "SOFTWARE",
     title: "SOFTWARE",
     body: "Web, desktop and cloud tools engineered for reliability — from first prototype to scaled production system.",
     features: ["Custom web apps", "Data pipelines", "API integration", "CI/CD & monitoring"],
   },
   {
+    id: "web",
     icon: "WEB",
     title: "WEB & MOBILE",
     body: "Sites and apps that feel native — fast, accessible and built to convert.",
     features: ["Next.js / React", "Mobile-first", "PWA", "Analytics & CRO"],
   },
   {
+    id: "game",
     icon: "GAME",
     title: "GAMES & DIGITAL SYSTEMS",
     body: "Interactive experiences, games and generative systems that push what the web can do.",
