@@ -8,7 +8,23 @@
    --accent-photo*) are intentionally left unchanged so hero text stays
    light over the dark hero images in BOTH themes.
    ============================================================================ */
-[data-theme="light"]{color-scheme:light;--bg:#eef2f8;--bg-2:#e7edf5;--bg-3:#e0e8f1;--bg-4:#d9e3ef;--deep:#eef2f8;--panel:#ffffff;--panel-2:#f6f9fc;--panel-3:#eaf1f8;--panel-4:#e2ebf4;--input:#ffffff;--card-a:#ffffffe6;--card-b:#eef4fae6;--line:#d3dde8;--line-2:#c2d0e0;--line-3:#adc0d6;--line-4:#9db3cb;--line-5:#cbd8e6;--line-6:#7fa6cd;--hairline:rgba(12,105,190,.16);--grid:rgba(10,140,255,.055);--text:#0c1a28;--text-bright:#05101b;--text-soft:#3c4f63;--text-lead:#47596e;--muted:#4f6377;--muted-2:#5b6f83;--muted-3:#687b8f;--muted-4:#77899c;--muted-5:#8798aa;--accent:#0a7ce0;--accent-2:#0b6cc9;--accent-hi:#2f96f5;--accent-lite:#1e83e2;--accent-soft:#0f6fc4;--accent-pale:#5aa7ef;--accent-brand:#1a80dd;--accent-bright:#1c8bf0;--accent-icon:#0a7ce0;--on-accent:#ffffff;--btn-alt-ink:#0c1a28;--nav-bg:rgba(238,242,248,.78);--veil-a:rgba(238,242,248,.86);--veil-b:rgba(238,242,248,.94);--veil-2a:rgba(238,242,248,.8);--veil-2b:rgba(238,242,248,.88);--foot-bg:rgba(238,242,248,.9);--foot-bg-2:rgba(238,242,248,.94);--bubble-bg:rgba(255,255,255,.96);--pop-shadow:0 20px 60px rgba(15,35,60,.14),0 0 50px rgba(10,140,255,.12);--ok:#0e9c6e;--danger:#d6453f}
+[data-theme="light"]{color-scheme:light;--bg:#eef2f8;--bg-2:#e7edf5;--bg-3:#e0e8f1;--bg-4:#d9e3ef;--deep:#eef2f8;--panel:#f7fafd;--panel-2:#f6f9fc;--panel-3:#eaf1f8;--panel-4:#e2ebf4;--input:#ffffff;--card-a:#f6fafee6;--card-b:#e8f0f8e6;--line:#d3dde8;--line-2:#c2d0e0;--line-3:#adc0d6;--line-4:#9db3cb;--line-5:#cbd8e6;--line-6:#7fa6cd;--hairline:rgba(12,105,190,.16);--grid:rgba(10,140,255,.055);--text:#0c1a28;--text-bright:#05101b;--text-soft:#3c4f63;--text-lead:#47596e;--muted:#4f6377;--muted-2:#5b6f83;--muted-3:#687b8f;--muted-4:#77899c;--muted-5:#8798aa;--accent:#0a7ce0;--accent-2:#0b6cc9;--accent-hi:#2f96f5;--accent-lite:#1e83e2;--accent-soft:#0f6fc4;--accent-pale:#5aa7ef;--accent-brand:#1a80dd;--accent-bright:#1c8bf0;--accent-icon:#0a7ce0;--on-accent:#ffffff;--btn-alt-ink:#0c1a28;--nav-bg:rgba(238,242,248,.92);--veil-a:rgba(238,242,248,.86);--veil-b:rgba(238,242,248,.94);--veil-2a:rgba(238,242,248,.8);--veil-2b:rgba(238,242,248,.88);--foot-bg:rgba(238,242,248,.97);--foot-bg-2:rgba(238,242,248,.985);--bubble-bg:rgba(255,255,255,.96);--pop-shadow:0 20px 60px rgba(15,35,60,.14),0 0 50px rgba(10,140,255,.12);--ok:#0e9c6e;--danger:#d6453f}
+/* ---- Light mode: blend the dark photo heroes into the light page ---- */
+/* 1. Stop the fixed dark photo from bleeding through translucent sections. */
+[data-theme="light"] main section:not(.hero):not(.page-hero){background:linear-gradient(180deg,var(--bg),var(--bg-2))}
+/* 2. Dissolve the bottom edge of the photo heroes into the light background so
+      there is no hard seam where the dark imagery meets the light sections. */
+[data-theme="light"] .hero-with-bg{background:linear-gradient(180deg,transparent 70%,color-mix(in srgb,var(--bg) 55%,transparent) 88%,var(--bg) 100%)}
+[data-theme="light"] .page-hero-with-bg{background:linear-gradient(180deg,transparent 60%,color-mix(in srgb,var(--bg) 55%,transparent) 84%,var(--bg) 100%)}
+/* 3. Unify the "white" surfaces (cards, CTA, steps) into the same soft cool-white
+      family as the page — defined by hairline borders + soft elevation shadows
+      instead of stark pure-white blocks, so nothing reads as a glaring highlight. */
+[data-theme="light"] .card,[data-theme="light"] .cta-inner{box-shadow:0 10px 30px rgba(15,35,60,.07)}
+[data-theme="light"] .step{box-shadow:0 6px 18px rgba(15,35,60,.05)}
+
+
+
+
 
 
     *{box-sizing:border-box;margin:0;padding:0}
@@ -87,7 +103,8 @@ h2,h3,h4{line-height:1.2}
 
     .city{position:absolute;bottom:20px;left:0;right:0;height:130px;background:linear-gradient(to top,color-mix(in srgb, var(--accent) 9%, transparent),transparent);clip-path:polygon(0 100%,0 75%,5% 75%,5% 55%,9% 55%,9% 68%,14% 68%,14% 35%,18% 35%,18% 65%,23% 65%,23% 45%,28% 45%,28% 72%,34% 72%,34% 30%,39% 30%,39% 62%,44% 62%,44% 42%,50% 42%,50% 70%,55% 70%,55% 25%,60% 25%,60% 60%,66% 60%,66% 40%,72% 40%,72% 68%,78% 68%,78% 32%,84% 32%,84% 65%,90% 65%,90% 48%,95% 48%,95% 72%,100% 72%,100% 100%)}
 
-    .tags{margin-top:30px;color:var(--muted-4);font-size:10px;letter-spacing:.2em;display:flex;gap:18px;flex-wrap:wrap}
+    .tags{margin-top:30px;display:flex;gap:10px;flex-wrap:wrap}
+.tags span{display:inline-flex;align-items:center;font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--text-bright);padding:8px 15px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
 
     :root{--sec-pad:clamp(64px,7vw,88px);--sec-pad-m:56px;--grid-gap:20px;--card-pad:28px;--h2-space:18px 0 12px;--lead-space:16px 0 22px}
 section{padding:var(--sec-pad);border-top:1px solid var(--hairline)}
@@ -338,20 +355,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 
 /* Phase 6 — polish / launch: a11y, focus, performance guards */
 main{position:relative;z-index:0}
-.minime{position:fixed;pointer-events:none;z-index:60;opacity:0;transition:opacity .3s ease}
-.minime.show{opacity:1}
-.minime-ring{width:28px;height:28px;border-radius:50%;border:1px solid var(--accent);background:radial-gradient(circle,color-mix(in srgb, var(--accent-2) 13%, transparent) 30%,transparent 75%),radial-gradient(circle,var(--accent) 40%,var(--accent) 70%,transparent 85%);position:absolute;inset:-1px;box-shadow:0 0 24px color-mix(in srgb, var(--accent) 20%, transparent);animation:blob 4s ease-in-out infinite}
-@keyframes blob{
-  0%,100%{transform:translate(0,0)}
-  50%{transform:translate(12px,-8px)}
-}
-.minime-face{width:20px;height:20px;border-radius:20px;background:var(--panel-2);border:1.5px solid var(--accent);display:grid;place-items:center;font-size:12px;font-weight:800;color:var(--accent-soft);position:relative}
-.minime-bubble{position:absolute;top:8px;left:28px;background:var(--bubble-bg);border:1px solid var(--accent);color:var(--text-soft);padding:4px 10px;border-radius:999px;font-size:9px;white-space:nowrap;box-shadow:0 0 14px color-mix(in srgb, var(--accent) 20%, transparent);pointer-events:none;opacity:0;transform:translateX(-6px);transition:opacity .3s ease,transform .3s ease;z-index:1}
-.minime-bubble::after{content:"";position:absolute;top:-5px;left:6px;width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid var(--bubble-bg)}
-.minime:hover .minime-bubble, .minime:focus-visible .minime-bubble{opacity:1;transform:none}
-.minime.bubble-on .minime-bubble{opacity:1;transform:none}
-.minime:hover .minime-ring, .minime:focus-visible .minime-ring{animation:none}
-@media(max-width:850px){.minime .minime-bubble{font-size:8px;padding:3px 8px;white-space:normal}}
 .skip-link{position:absolute;left:-9999px;top:0;z-index:100;background:var(--accent);color:var(--on-accent);padding:10px 18px;border-radius:0 0 10px 0;font-size:12px;letter-spacing:.1em}
 .skip-link:focus{left:0}
 a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:2px}

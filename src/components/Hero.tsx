@@ -37,11 +37,8 @@ export default function Hero() {
               </Link>
             </div>
             <div className="tags">
-              {siteConfig.heroTags.map((t, i) => (
-                <span key={t}>
-                  {i > 0 ? <span>•&nbsp;&nbsp;</span> : null}
-                  {t}
-                </span>
+              {siteConfig.heroTags.map((t) => (
+                <span key={t}>{t}</span>
               ))}
             </div>
           </div>

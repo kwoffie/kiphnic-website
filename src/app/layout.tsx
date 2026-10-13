@@ -3,7 +3,6 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ChatLauncher from "@/components/chat/ChatLauncher";
-import MiniMe from "@/components/MiniMe";
 import ThemeProvider from "@/components/ThemeProvider";
 import AuthProvider from "@/components/auth/AuthProvider";
 import { siteConfig } from "@/lib/site-config";
@@ -72,7 +71,6 @@ export default function RootLayout({
             <Navbar />
             <div id="main">{children}</div>
             <Footer />
-            <MiniMe />
             <ChatLauncher />
           </AuthProvider>
         </ThemeProvider>
