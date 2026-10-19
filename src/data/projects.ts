@@ -49,6 +49,8 @@ export const projects: Project[] = [
     tag: "WEBSITE",
     body: "Church website — services, community life and announcements online.",
     image: "/projects/shalom.webp",
+    href: "https://shalom-baptist-xi.vercel.app/",
+    external: true,
     gallery: ["/projects/shalom.webp", "/projects/shalom-2.webp"],
   },
   {
