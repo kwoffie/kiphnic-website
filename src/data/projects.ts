@@ -31,6 +31,8 @@ export const projects: Project[] = [
     tag: "WEBSITE",
     body: "School website — admissions, news and academic life in one modern platform.",
     image: "/projects/brightlingsea.webp",
+    href: "https://brightlingsea-academy-deploy.vercel.app/",
+    external: true,
     gallery: ["/projects/brightlingsea.webp", "/projects/brightlingsea-2.webp"],
   },
   {
