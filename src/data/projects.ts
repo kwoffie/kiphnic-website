@@ -90,9 +90,9 @@ export const projects: Project[] = [
     body: "Fantasy game world — exploration, quests and open-world mechanics.",
     image: "/projects/fantasy-realm.webp",
     gallery: [
-      "/projects/fantasy-realm.webp",
-      "/projects/fantasy-realm-2.webp",
-      "/projects/fantasy-realm-3.webp",
+      "/projects/fantasy-realm-gameplay-1.webp",
+      "/projects/fantasy-realm-gameplay-2.webp",
+      "/projects/fantasy-realm-gameplay-3.webp",
     ],
   },
 ];
